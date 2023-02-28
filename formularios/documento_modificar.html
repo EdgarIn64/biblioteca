@@ -14,24 +14,68 @@
 
 <body onload="navegacion()">
 <header class="navegacion">
-	<form style="display: inline;" class="d-xl-none" method="post" action="">
-		<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >Menú</button>
+    <form style="display: inline;" class="d-xl-none" method="post" action="">
+    	<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >Menú</button>
 			<ul class="dropdown-menu">
 				<li>
-					<a class="dropdown-item" href="formularios/documento_subir.html">Subir Documento</a>
+					<a class="dropdown-item" href="documento_subir.html">Subir Documento</a>
+				</li>
+				<li>
+					<a class="dropdown-item" href="usuario_password.html">Cambiar Contraseña</a>
 				</li>
 				<div class="dropdown-divider"></div>
-				<div id="menuJs"></div>
-			</ul>
-		<input type="submit" class="right btn btn-light" name="salir" value="Salir">
+				<li>
+					<label class="dropdown-item">Área --></label>
+					<ul class="dropdown-menu dropdown-submenu">
+						<li>
+							<a class="dropdown-item" href="area_subir.html">Subir Área</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="area_modificar.html">Modificar Área</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="area_eliminar.html">Eliminar Área</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<label class="dropdown-item">Subárea --> </label>
+					<ul class="dropdown-menu dropdown-submenu">
+						<li>
+							<a class="dropdown-item" href="subarea_subir.html">Subir Subárea</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="subarea_modificar.html">Modificar Subárea</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="subarea_eliminar.html">Eliminar Subárea</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<label class="dropdown-item">Usuario --> </label>
+					<ul class="dropdown-menu dropdown-submenu">
+						<li>
+							<a class="dropdown-item" href="usuario_subir.html">Subir Usuario</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="usuario_modificar.html">Modificar Usuario</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="usuario_eliminar.html">Eliminar Usuario</a>
+						</li>
+					</ul>
+				</li>
+				</ul>
+		<a href="../login.html" class="right btn btn-light">Salir</a>
 	</form>
 	<a href="../index.html">
 		<img src="../img/logo_white.png" id="logo" alt="Logo Signode">
 	</a>
 	<form class="right d-none d-xl-block" method="post" id="listaJs">
-		<a class="btn dropdown-toggle lista" href="formularios/documento_subir.html">Documento</a>
+		<a class="btn dropdown-toggle lista" href="documento_subir.html">Documento</a>
 	</form>
-</header><!-- Titulo del formulario -->
+</header>
 <header class="titulo">
 	<h1><a href="">Modificar Documento</a></h1>
 	<hr>
@@ -47,7 +91,7 @@
 	<!-- Botón personalizado para subir Archivo -->
 	<label class="custom-file-upload">
 		Subir Nuevo Archivo
-		<input type="file" name="documento" id="archivo">
+		<input type="file" name="documento" onchange="subirArchivo()" id="archivo">
 	</label>
 	<h5 id="nombreArchivo"></h5>
 	<h4 id="advertenciaOculta">El archivo debe pesar menos de 30mb</h4>
