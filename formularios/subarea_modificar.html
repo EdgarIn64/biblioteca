@@ -3,6 +3,7 @@
 <head>
 	<title>Modificar Subárea</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="../img/logo_icon.png">
 	<link rel="stylesheet" type="text/css" href="../css/formulario.css">
 	<link rel="stylesheet" type="text/css" href="../css/navegacion.css">
@@ -13,39 +14,82 @@
 
 <body onload="navegacion('../')">
 <header class="navegacion">
-	<form style="display: inline;" class="d-xl-none" method="post" action="">
-		<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >Menú</button>
+    <form style="display: inline;" class="d-xl-none" method="post" action="">
+    	<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >Menú</button>
 			<ul class="dropdown-menu">
 				<li>
-					<a class="dropdown-item" href="formularios/documento_subir.html">Subir Documento</a>
+					<a class="dropdown-item" href="documento_subir.html">Subir Documento</a>
+				</li>
+				<li>
+					<a class="dropdown-item" href="usuario_password.html">Cambiar Contraseña</a>
 				</li>
 				<div class="dropdown-divider"></div>
-				<div id="menuJs"></div>
-			</ul>
-		<input type="submit" class="right btn btn-light" name="salir" value="Salir">
+				<li>
+					<label class="dropdown-item">Área --></label>
+					<ul class="dropdown-menu dropdown-submenu">
+						<li>
+							<a class="dropdown-item" href="area_subir.html">Subir Área</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="area_modificar.html">Modificar Área</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="area_eliminar.html">Eliminar Área</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<label class="dropdown-item">Subárea --> </label>
+					<ul class="dropdown-menu dropdown-submenu">
+						<li>
+							<a class="dropdown-item" href="subarea_subir.html">Subir Subárea</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="subarea_modificar.html">Modificar Subárea</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="subarea_eliminar.html">Eliminar Subárea</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<label class="dropdown-item">Usuario --> </label>
+					<ul class="dropdown-menu dropdown-submenu">
+						<li>
+							<a class="dropdown-item" href="usuario_subir.html">Subir Usuario</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="usuario_modificar.html">Modificar Usuario</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="usuario_eliminar.html">Eliminar Usuario</a>
+						</li>
+					</ul>
+				</li>
+				</ul>
+		<a href="../login.html" class="right btn btn-light">Salir</a>
 	</form>
 	<a href="../index.html">
 		<img src="../img/logo_white.png" id="logo" alt="Logo Signode">
 	</a>
 	<form class="right d-none d-xl-block" method="post" id="listaJs">
-		<a class="btn dropdown-toggle lista" href="formularios/documento_subir.html">Documento</a>
+		<a class="btn dropdown-toggle lista" href="documento_subir.html">Documento</a>
 	</form>
-</header><!-- Titulo del formulario -->
+</header>
 
 <!-- Titulo del formulario -->
 <header class="titulo">
 	<h1><a href="">Modificar Subárea</a></h1>
 	<!-- Boton para volver al buscador -->
-	<a href="../buscador/subarea.php?accion=modificar" class="btn btn-buscar">
-		Modificar otra Subárea
-	</a>
 	<hr>
 </header>
 <!-- Formulario del subarea -->
 <form enctype="multipart/form-data" method="post" action="" class="col-sm-11 col-md-10 col-lg-9 col-xl-9 formulario">
 	<label>Nombre:</label>
+	<input type="text" name="nombre" value="X">
 	<br>
-	<label>Icono Actual:</label>	
+	<label>Icono Actual:</label>
+	<img src="../img/subareas/x.png" class="icono">
 	<br>
 	<!-- Boton personalizado para subir icono -->
 	<label class="custom-file-upload">
@@ -59,8 +103,6 @@
 </form>
 
 <!-- Script para mostrar y ocultar Subareas -->
-<script type="text/javascript" src="../js/areas.js"></script>
-<script type="text/javascript" src="../js/nombreArchivo.js"></script>
 <script type="text/javascript" src="../js/listas.js"></script>
 </body>
 </html>

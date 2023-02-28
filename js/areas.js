@@ -5,7 +5,6 @@ const getSelect = (id) => {
 
 function sub() {
 	let mostrar = getSelect('areas');
-	//let departamento = document.getElementById("areas").value;
 	let ocultar = document.getElementsByClassName("ocultar");
 	for(i=0; i<ocultar.length; i++) {
 		ocultar[i].style.display = "none";

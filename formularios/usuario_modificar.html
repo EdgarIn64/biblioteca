@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Modificar Usuario</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="../img/logo_icon.png">
 	<link rel="stylesheet" type="text/css" href="../css/formulario.css">
 	<link rel="stylesheet" type="text/css" href="../css/navegacion.css">
@@ -10,24 +12,68 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body onload="navegacion()">
+<body onload="navegacion('../')">
 <header class="navegacion">
-	<form style="display: inline;" class="d-xl-none" method="post" action="">
-		<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >Menú</button>
+    <form style="display: inline;" class="d-xl-none" method="post" action="">
+    	<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >Menú</button>
 			<ul class="dropdown-menu">
 				<li>
-					<a class="dropdown-item" href="formularios/documento_subir.html">Subir Documento</a>
+					<a class="dropdown-item" href="documento_subir.html">Subir Documento</a>
+				</li>
+				<li>
+					<a class="dropdown-item" href="usuario_password.html">Cambiar Contraseña</a>
 				</li>
 				<div class="dropdown-divider"></div>
-				<div id="menuJs"></div>
-			</ul>
-		<input type="submit" class="right btn btn-light" name="salir" value="Salir">
+				<li>
+					<label class="dropdown-item">Área --></label>
+					<ul class="dropdown-menu dropdown-submenu">
+						<li>
+							<a class="dropdown-item" href="area_subir.html">Subir Área</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="area_modificar.html">Modificar Área</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="area_eliminar.html">Eliminar Área</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<label class="dropdown-item">Subárea --> </label>
+					<ul class="dropdown-menu dropdown-submenu">
+						<li>
+							<a class="dropdown-item" href="subarea_subir.html">Subir Subárea</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="subarea_modificar.html">Modificar Subárea</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="subarea_eliminar.html">Eliminar Subárea</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<label class="dropdown-item">Usuario --> </label>
+					<ul class="dropdown-menu dropdown-submenu">
+						<li>
+							<a class="dropdown-item" href="usuario_subir.html">Subir Usuario</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="usuario_modificar.html">Modificar Usuario</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="usuario_eliminar.html">Eliminar Usuario</a>
+						</li>
+					</ul>
+				</li>
+				</ul>
+		<a href="../login.html" class="right btn btn-light">Salir</a>
 	</form>
 	<a href="../index.html">
 		<img src="../img/logo_white.png" id="logo" alt="Logo Signode">
 	</a>
 	<form class="right d-none d-xl-block" method="post" id="listaJs">
-		<a class="btn dropdown-toggle lista" href="formularios/documento_subir.html">Documento</a>
+		<a class="btn dropdown-toggle lista" href="documento_subir.html">Documento</a>
 	</form>
 </header>
 <!-- Titulo del formulario -->
@@ -39,53 +85,27 @@
 	</a>
 	<hr>
 </header>
-<?php
-	// Activación del boton Actualizar.
-	if(isset($_POST['actualizar'])) {
-		// Actualización del usuario a la base de datos.
-		include_once("../controlador/Crud_usuario.php");
-		$resultado = updateUsuario($id);
-		// Mensaje del resultado.
-		include_once("msjResultado.php");
-	}
-?>
 <!-- Formulario del Usuario -->
 <form method="post" action="" class="col-sm-11 col-md-10 col-lg-9 col-xl-9 formulario">
 	<label>Puesto:</label>
-	<?php  
-		// Input para nombre del usuario .
-		// Nombre actual del usuario .
-		echo '<input type="text" name="puesto" value="'.$puesto.'" maxlength="50" required>'
-	?>
+	<input type="text" name="puesto" value="X" maxlength="50" required>
 	<label>Contraseña:</label>
-	<?php  
-		// Input para contraseña del usuario .
-		// Contraseña actual del usuario .
-		echo '<input type="password" name="password" id="password" value="'.$password.'"  maxlength="50" required>'
-	?>
+	<input type="password" name="password" id="password" value="1234"  maxlength="50" required>
 	<!-- Boton para ver la contraseña actual -->
 	<input type="checkbox" class="check" id="checkPassword" onclick="viewPassword()">
 	<label class="msjCheck" onclick="msjPassword()">Ver contraseña</label>
 	<br>
 	<label>Área:</label>
 	<select name="id_area" id="area">
-		<?php  
-			// Departamento actual del usuario.
-			echo '<option value="">---</option>';
-			// Lista de departamentos.
-			foreach ($areas as $key => $value) {
-				$id_area = $value->getId();
-				if($id_area_actual == $id_area)
-					echo '<option value="'.$id_area.'" selected>'.$value->getNombre().'</option>';
-				else
-					echo '<option value="'.$id_area.'">'.$value->getNombre().'</option>';
-			}
-		?>
+		<option>Área 1</option>
+		<option>Área 2</option>
+		<option>Área 3</option>
 	</select>
 	<!-- Boton para Actualizar los datos del Usuario -->
 	<button class="btn btn-submit" name="actualizar">Actualizar Usuario</button>
 </form>
 <!-- Script para hacer visible la contraseña -->
+<script type="text/javascript" src="../js/listas.js"></script>
 <script type="text/javascript" src="../js/login.js"></script>
 </body>
 </html>

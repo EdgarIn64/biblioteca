@@ -13,21 +13,67 @@
 <body onload="navegacion()">
 <header class="navegacion">
     <form style="display: inline;" class="d-xl-none" method="post" action="">
-    	<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >Menú</button>
-			<ul class="dropdown-menu">
-				<li>
-					<a class="dropdown-item" href="formularios/documento_subir.html">Subir Documento</a>
-				</li>
-				<div class="dropdown-divider"></div>
-				<div id="menuJs"></div>
-			</ul>
+        <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >Menú</button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="formularios/documento_subir.html">Subir Documento</a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="formularios/usuario_password.html">Cambiar Contraseña</a>
+                </li>
+                <div class="dropdown-divider"></div>
+                <li>
+                    <label class="dropdown-item">Área --></label>
+                    <ul class="dropdown-menu dropdown-submenu">
+                        <li>
+                            <a class="dropdown-item" href="formularios/area_subir.html">Subir Área</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="formularios/area_modificar.html">Modificar Área</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="formularios/area_eliminar.html">Eliminar Área</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <label class="dropdown-item">Subárea --> </label>
+                    <ul class="dropdown-menu dropdown-submenu">
+                        <li>
+                            <a class="dropdown-item" href="formularios/subarea_subir.html">Subir Subárea</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="formularios/subarea_modificar.html">Modificar Subárea</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="formularios/subarea_eliminar.html">Eliminar Subárea</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <label class="dropdown-item">Usuario --> </label>
+                    <ul class="dropdown-menu dropdown-submenu">
+                        <li>
+                            <a class="dropdown-item" href="formularios/usuario_subir.html">Subir Usuario</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="formularios/usuario_modificar.html">Modificar Usuario</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="formularios/usuario_eliminar.html">Eliminar Usuario</a>
+                        </li>
+                    </ul>
+                </li>
+                </ul>
+
         <input type="submit" class="right btn btn-light" name="salir" value="Salir">
+
     </form>
     <a href="index.html">
         <img src="img/logo_white.png" id="logo" alt="Logo Signode">
     </a>
     <form class="right d-none d-xl-block" method="post" id="listaJs">
-    	<a class="btn dropdown-toggle lista" href="formularios/documento_subir.html">Documento</a>
+        <a class="btn dropdown-toggle lista" href="formularios/documento_subir.html">Documento</a>
     </form>
 </header>
 

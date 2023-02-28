@@ -14,15 +14,5 @@ function navegacion(path="") {
 	}
 	listaJs.innerHTML += '<a href="'+path+'formularios/usuario_password.html">'
 		+ '<label id="usuarioNombre">Usuario</label></a>'
-		+ '<input type="submit" id="btnSalir" class="btn btn-light" name="salir" value="Salir">'
-
-	let menuJs = document.getElementById('menuJs')
-	for (i=0; i<elementos.length; i++) {
-		menuJs.innerHTML += '<li><label class="dropdown-item">'+elementos[i]+' ---> </label>'
-		+ '<ul class="dropdown-menu dropdown-submenu">'
-		+ '<li><a class="dropdown-item" href="'+path+'formularios/'+elementos[i]+'_subir.php">Subir '+elementos[i]+'</a></li>'
-		+ '<li><a class="dropdown-item" href="'+path+'buscador/'+elementos[i]+'.php?accion=modificar">Modificar '+elementos[i]+'</a></li>'
-		+ '<li><a class="dropdown-item" href="'+path+'buscador/'+elementos[i]+'.php?accion=eliminar">Eliminar '+elementos[i]+'</a></li>'
-		+ '</ul></li>'
-	}
+		+ '<a href="'+path+'login.html" id="btnSalir" class="btn btn-light">Salir</a>'
 }
