@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eliminar Documento</title>
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" type="text/css" href="../css/formulario.css">
+	<link rel="stylesheet" type="text/css" href="../css/navegacion.css">
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body onload="navegacion('../')">
+<header class="navegacion">
+	<form style="display: inline;" class="d-xl-none" method="post" action="">
+		<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >Menú</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="dropdown-item" href="formularios/documento_subir.html">Subir Documento</a>
+				</li>
+				<div class="dropdown-divider"></div>
+				<div id="menuJs"></div>
+			</ul>
+		<input type="submit" class="right btn btn-light" name="salir" value="Salir">
+	</form>
+	<a href="../index.html">
+		<img src="../img/logo_white.png" id="logo" alt="Logo Signode">
+	</a>
+	<form class="right d-none d-xl-block" method="post" id="listaJs">
+		<a class="btn dropdown-toggle lista" href="formularios/documento_subir.html">Documento</a>
+	</form>
+</header><!-- Titulo del formulario -->
+<header class="titulo">
+	<h1><a href="">Eliminar Documento</a></h1>
+	<hr>
+</header>
+
+<!-- Formulario del Documento -->
+<form method="post" action="" class="col-sm-11 col-md-10 col-lg-9 col-xl-9 formulario eliminar">
+	<!-- Mensaje de Advertencia -->
+	<h2 class="advertencia">¿ESTAS SEGURO DE ELIMINAR ESTE DOCUMENTO?</h2>
+	<label>Titulo:</label>
+	<br>
+	<label>Archivo:</label>
+	<a href="../archivos/X.pdf" target="_blank">link_del_archivo</a>
+	<br>
+	<label>Area: ÁreaX - SubáreaX </label>
+	<!-- Boton para Eliminar el nuevo area -->
+	<button class="btn btn-submit" name="eliminar" id="eliminar">Eliminar Documento</button>
+</form>
+<script type="text/javascript" src="../js/listas.js"></script>
+
+</body>
+</html>

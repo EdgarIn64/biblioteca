@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modificar Usuario</title>
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" type="text/css" href="../css/formulario.css">
+	<link rel="stylesheet" type="text/css" href="../css/navegacion.css">
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body onload="navegacion()">
+<header class="navegacion">
+	<form style="display: inline;" class="d-xl-none" method="post" action="">
+		<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >Menú</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="dropdown-item" href="formularios/documento_subir.html">Subir Documento</a>
+				</li>
+				<div class="dropdown-divider"></div>
+				<div id="menuJs"></div>
+			</ul>
+		<input type="submit" class="right btn btn-light" name="salir" value="Salir">
+	</form>
+	<a href="../index.html">
+		<img src="../img/logo_white.png" id="logo" alt="Logo Signode">
+	</a>
+	<form class="right d-none d-xl-block" method="post" id="listaJs">
+		<a class="btn dropdown-toggle lista" href="formularios/documento_subir.html">Documento</a>
+	</form>
+</header>
+<!-- Titulo del formulario -->
+<header class="titulo">
+	<h1><a href="">Modificar Usuario</a></h1>
+	<!-- Boton para volver al buscador -->
+	<a href="../buscador/usuario.php?accion=modificar" class="btn btn-buscar">
+		Buscar otro Usuario
+	</a>
+	<hr>
+</header>
+<?php
+	// Activación del boton Actualizar.
+	if(isset($_POST['actualizar'])) {
+		// Actualización del usuario a la base de datos.
+		include_once("../controlador/Crud_usuario.php");
+		$resultado = updateUsuario($id);
+		// Mensaje del resultado.
+		include_once("msjResultado.php");
+	}
+?>
+<!-- Formulario del Usuario -->
+<form method="post" action="" class="col-sm-11 col-md-10 col-lg-9 col-xl-9 formulario">
+	<label>Puesto:</label>
+	<?php  
+		// Input para nombre del usuario .
+		// Nombre actual del usuario .
+		echo '<input type="text" name="puesto" value="'.$puesto.'" maxlength="50" required>'
+	?>
+	<label>Contraseña:</label>
+	<?php  
+		// Input para contraseña del usuario .
+		// Contraseña actual del usuario .
+		echo '<input type="password" name="password" id="password" value="'.$password.'"  maxlength="50" required>'
+	?>
+	<!-- Boton para ver la contraseña actual -->
+	<input type="checkbox" class="check" id="checkPassword" onclick="viewPassword()">
+	<label class="msjCheck" onclick="msjPassword()">Ver contraseña</label>
+	<br>
+	<label>Área:</label>
+	<select name="id_area" id="area">
+		<?php  
+			// Departamento actual del usuario.
+			echo '<option value="">---</option>';
+			// Lista de departamentos.
+			foreach ($areas as $key => $value) {
+				$id_area = $value->getId();
+				if($id_area_actual == $id_area)
+					echo '<option value="'.$id_area.'" selected>'.$value->getNombre().'</option>';
+				else
+					echo '<option value="'.$id_area.'">'.$value->getNombre().'</option>';
+			}
+		?>
+	</select>
+	<!-- Boton para Actualizar los datos del Usuario -->
+	<button class="btn btn-submit" name="actualizar">Actualizar Usuario</button>
+</form>
+<!-- Script para hacer visible la contraseña -->
+<script type="text/javascript" src="../js/login.js"></script>
+</body>
+</html>

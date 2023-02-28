@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Documentos</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/navegacion.css">
+	<link rel="stylesheet" type="text/css" href="css/principal.css">
+	<link rel="icon" type="image/png" href="img/logo_icon.png">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body onload="navegacion()">
+<header class="navegacion">
+	<form style="display: inline;" class="d-xl-none" method="post" action="">
+		<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >Menú</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="dropdown-item" href="formularios/documento_subir.html">Subir Documento</a>
+				</li>
+				<div class="dropdown-divider"></div>
+				<div id="menuJs"></div>
+			</ul>
+		<input type="submit" class="right btn btn-light" name="salir" value="Salir">
+	</form>
+	<a href="index.html">
+		<img src="img/logo_white.png" id="logo" alt="Logo Signode">
+	</a>
+	<form class="right d-none d-xl-block" method="post" id="listaJs">
+		<a class="btn dropdown-toggle lista" href="formularios/documento_subir.html">Documento</a>
+	</form>
+</header>
+
+<form method="post" action="" class="titulo">
+	<!-- Titulo de la página con el nombre del
+		area y subarea en el que
+		esta ubicado -->
+	<h1><a href="" id="titulo">ÁREA X – SUBÁREA X</a></h1>
+    <!-- Buscar un documento -->
+    <input type="text" name="textBuscar" class="buscar textBuscar" placeholder="Buscar Documento">
+    <button name="btnBuscar" class="buscar btnBuscar">Buscar</button>
+    <hr>
+</form>
+
+<!-- Lista de documentos del area -->
+<table class="table col-xl-12 documentos" id="listaDoc">
+	<tr>
+		<thead>
+			<!-- Titulos de las columnas -->
+			<th>Documento</th>
+			<th>Fecha Modificación</th>
+			<th>Revisión</th>
+			<th>Modificar</th>
+			<th>Eliminar</th>
+		</thead>
+	</tr>
+	<tr>
+		<td>
+			<details>
+				<summary>Título X</summary>
+				<strong>Archivo Adjunto: </strong>
+				<a href="archivos/X.pdf" target="_blank">X.pdf</a>
+				<br>
+				<strong>Estado: </strong>
+				Documento activo
+			</details>
+		</td>
+		<td>27/02/2023</td>
+		<td>#</td>
+		<td><a href="formularios/documento_modificar.html">Modificar</a></td>
+		<td><a href="formularios/documento_eliminar.html">Eliminar</a></td>
+	</tr>
+</table>
+
+<script type="text/javascript">
+    let titulo = document.getElementById('titulo').innerHTML;
+    document.title = titulo;
+
+    let listaDoc = document.getElementById('listaDoc');
+    for(i=0; i<10; i++) {
+    	listaDoc.innerHTML += '<tr>'
+		+ '<td>'
+			+ '<details>'
+				+ '<summary>Título X</summary>'
+				+ '<strong>Archivo Adjunto: </strong>'
+				+ '<a href="archivos/X.pdf" target="_blank">X.pdf</a><br>'
+				+ '<strong>Estado: </strong>Documento activo'
+			+ '</details>'
+		+ '</td>'
+		+ '<td>27/02/2023</td>'
+		+ '<td>#</td>'
+		+ '<td><a href="formularios/documento_modificar.html">Modificar</a></td>'
+		+ '<td><a href="formularios/documento_eliminar.html">Eliminar</a></td>'
+	+ '</tr>'
+    }
+</script>
+
+<script type="text/javascript" src="js/listas.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Subir Subarea</title>
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+</head>
+<body>
+<!-- Titulo del formulario -->
+<header class="titulo">
+	<h1><a href="">Subir nueva Subárea</a></h1>
+	<hr>
+</header>
+
+<!-- Formulario del Subarea -->
+<form enctype="multipart/form-data" method="post" action="" class="col-sm-11 col-md-10 col-lg-9 col-xl-9 formulario">
+	<!-- Input nombre del Subarea -->
+	<label>Nombre:</label>
+	<input type="text" name="nombre" class="text" maxlength="60" required autofocus>
+	<label>Area Superior:</label>
+	<!-- Selección del area superior -->
+	<select name="area" id="areas" onchange="sub()">
+	</select>
+	<br>
+	<label>Sub Área Superior:</label>
+	<br>
+	<label>Icono:</label>
+	<!-- Botón personalizado para subir Icono -->
+	<label class="custom-file-upload">
+		Subir Nuevo Icono
+		<input type="file" accept="image/png" id="icono" onchange="subirIcono()" name="icono" required>
+	</label>
+	<h4 id="nombreArchivo"></h4>
+	<h4 id="advertenciaOculta">La imagen pesa demasiado, debe pesar menos de 500kb</h4>
+	<!-- Boton para subir los datos del Subarea -->
+	<button class="btn btn-submit" id="btnSubir" name="subir">Subir nueva Subárea</button>
+</form>
+<script type="text/javascript" src="../js/areas.js"></script>
+<script type="text/javascript" src="../js/nombreArchivo.js"></script>
+</body>
+</html>

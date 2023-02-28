@@ -1,0 +1,142 @@
+.formulario {
+	margin: 15px auto;
+	border: 3px solid rgb(179, 61, 38);
+	border-radius: 4px;
+	box-shadow: rgba(100, 0, 0, 0.35) 0px 4px 12px;
+	padding: 20px;
+	background-color: rgb(247, 247, 247);
+	font-size: 1.3rem;
+	min-width: 200px;
+	margin-bottom: 40px;
+}
+
+.formulario select  {
+	margin-top: 12px;
+	margin-right: 15px;
+}
+
+.formulario .archivo {
+	margin-top: 12px;
+}
+
+.formulario input[type="number"] {
+	width: 60px;
+}
+
+.formulario input[type="text"], form input[type="password"] {
+	width: 70%;
+	min-width: 290px;
+	display: block;
+	margin-bottom: 0px;
+}
+
+.formulario input.text {
+	width: 100%;
+}
+
+.formulario input.revision {
+	width: 50px;
+}
+
+.formulario input[type="file"] {
+    display: none;
+}
+
+form label.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: rgb(190, 68, 37);
+    color: white;
+    margin: 10px;
+}
+
+form label.custom-file-upload:hover {
+    background-color: rgb(211, 54, 24);
+}
+
+form img.icono {
+	width: 80px;
+	margin-right: 10px;
+}
+
+form table {
+	width: 100%;
+}
+
+.formulario .btn-submit, .titulo .btn-buscar {
+	font-size: 1.25rem;
+	padding: 10px 40px;
+	margin-top: 15px;
+}
+
+.formulario .btn-submit {
+	color: white;	
+	background-color: rgb(170, 38, 11);
+	display: block;
+}
+
+.titulo .btn-buscar {
+	background-color: white;
+	color: black;
+	border: 2px solid rgb(170, 38, 11);
+}
+
+.formulario .btn-submit:hover, .titulo .btn-buscar:hover {
+	background-color: rgb(201, 51, 21);
+	color: white;
+}
+
+form.eliminar {
+	font-size: 1.55rem;
+	padding: 10px 50px;
+}
+
+form.eliminar .btn-submit{
+	font-size: 1.5rem;
+}
+
+form.eliminar label {
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+form .advertencia {
+	color: red;
+}
+
+td {
+	padding: 10px 30px 10px 0px;
+}
+
+.check, .msjCheck {
+	cursor: pointer;
+}
+
+div.alert {
+	margin: 10px;
+	font-size: 1.4rem;
+}
+
+.titulo {
+	text-align: center;
+	margin: 5px;
+	padding: 5px;
+	text-transform: capitalize;
+}
+
+.titulo h1 a {
+	text-shadow: 1px 1px 1px black;
+	color: rgb(201, 51, 21);
+}
+
+.titulo h1 a:hover {
+	filter: brightness(115%);
+}
+
+form h4#advertenciaOculta {
+	color: red;
+	display: none;
+}

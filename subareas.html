@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subareas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/navegacion.css">
+    <link rel="stylesheet" type="text/css" href="css/principal.css">
+    <link rel="icon" type="image/png" href="img/logo_icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body onload="navegacion()">
+<header class="navegacion">
+    <form style="display: inline;" class="d-xl-none" method="post" action="">
+    	<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >Menú</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="dropdown-item" href="formularios/documento_subir.html">Subir Documento</a>
+				</li>
+				<div class="dropdown-divider"></div>
+				<div id="menuJs"></div>
+			</ul>
+        <input type="submit" class="right btn btn-light" name="salir" value="Salir">
+    </form>
+    <a href="index.html">
+        <img src="img/logo_white.png" id="logo" alt="Logo Signode">
+    </a>
+    <form class="right d-none d-xl-block" method="post" id="listaJs">
+    	<a class="btn dropdown-toggle lista" href="formularios/documento_subir.html">Documento</a>
+    </form>
+</header>
+
+
+<!-- Sección para Buscar un documento-->
+<form method="post" action="" class="titulo">
+    <h1><a href="" id="tituloPage">Subarea X</a></h1>
+    <input type="text" name="textBuscar" class="buscar textBuscar"  placeholder="Buscar Documento" required>
+    <button name="btnBuscar" class="buscar btnBuscar">Buscar</button>
+    <hr>
+</form>
+<!-- Div donde se veran todas las subareas -->
+<div class="areas" id="subareas">
+</div>
+
+<script type="text/javascript">
+    let titulo = document.getElementById('tituloPage').innerHTML;
+    document.title = titulo;
+    let subareas = document.getElementById('subareas');
+    for(i=0; i<5; i++) {
+        subareas.innerHTML += '<a href="documentos.html?area=X&sub=X" class="btn col-sm-6 col-md-6 col-lg-4 col-xl-3">Subárea X<br><img src="img/subareas/x.png" class="area"></a>';
+    }
+</script>
+
+<script type="text/javascript" src="js/listas.js"></script>
+
+</body>
+</html>

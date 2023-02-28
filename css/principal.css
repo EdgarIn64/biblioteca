@@ -1,0 +1,110 @@
+.titulo {
+	text-align: center;
+	margin: 10px;
+	padding: 5px;
+}
+
+.titulo h1 a {
+	text-shadow: 1px 1px 1px black;
+	color: rgb(201, 51, 21);
+}
+
+.titulo h1 a:hover {
+	filter: brightness(115%);
+}
+
+.titulo .buscar {
+	font-size: 1.25rem;
+} 
+
+.titulo .textBuscar {
+	width: 64%;
+} 
+
+.titulo .btnBuscar {
+	background-color: rgb(199, 71, 48);
+	border: 1px solid rgb(199, 71, 48);
+	border-radius: 4px;
+	color: white;
+	padding: 2px 15px;
+}
+
+.titulo .btnBuscar:hover, .titulo .btnSubir:hover {
+	filter: brightness(112%);
+}
+
+.titulo .btnSubir {
+	font-size: 1.25rem;
+	background-color: rgb(174, 47, 34);
+	border-radius: 4px;
+	color: white;
+	padding: 2px 15px;
+	margin-left: 20px;
+}
+
+.titulo hr {
+	box-shadow: 1px 1px 1px 1px rgb(209, 81, 58);
+}
+
+.areas {
+	margin-bottom: 50px;
+}
+
+.areas .btn {
+	font-size: 2rem;
+	margin: 10px 0px;
+	height: 220px;
+}
+
+.areas .btn:hover {
+	background-color: rgb(199, 81, 58);
+	text-align: center;
+	color: white;
+}
+
+img.area {
+	height: 110px;
+}
+
+details {
+	margin-left: 10px;
+}
+
+summary {
+	border-bottom: 1px solid gray;
+}
+
+summary.solo {
+	margin-left: 30px;	
+}
+
+summary:hover {
+	background-color: rgb(244, 244, 244);
+}
+
+aside {
+	float: left;
+	height: 100%;
+	padding: 10px;
+	margin-right: 20px;
+	border: 2px solid gray;
+}
+
+table.documentos {
+	margin-bottom: 70px;
+	font-size: 1.1rem;
+}
+
+table.documentos .dropdown-item:hover {
+	background-color: rgb(199, 81, 58);
+	color: white;
+}
+
+tr:hover {
+	background-color: rgb(242, 237, 237);
+}
+
+summary:hover {
+	background-color: rgb(232, 227, 227);
+}
+

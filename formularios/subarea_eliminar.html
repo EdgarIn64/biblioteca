@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eliminar Subarea</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" type="text/css" href="../css/formulario.css">
+	<link rel="stylesheet" type="text/css" href="../css/navegacion.css">
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body onload="navegacion('../')">
+<header class="navegacion">
+	<form style="display: inline;" class="d-xl-none" method="post" action="">
+		<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >Menú</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="dropdown-item" href="formularios/documento_subir.html">Subir Documento</a>
+				</li>
+				<div class="dropdown-divider"></div>
+				<div id="menuJs"></div>
+			</ul>
+		<input type="submit" class="right btn btn-light" name="salir" value="Salir">
+	</form>
+	<a href="../index.html">
+		<img src="../img/logo_white.png" id="logo" alt="Logo Signode">
+	</a>
+	<form class="right d-none d-xl-block" method="post" id="listaJs">
+		<a class="btn dropdown-toggle lista" href="formularios/documento_subir.html">Documento</a>
+	</form>
+</header><!-- Titulo del formulario -->
+<header class="titulo">
+	<h1><a href="">Eliminar Subárea</a></h1>
+	<a href="../buscador/subarea.php?accion=eliminar" class="btn btn-buscar">
+		Eliminar otra Subárea
+	</a>
+	<hr>
+</header>
+<!-- Información de la subarea -->
+<form method="post" action="" class="col-sm-11 col-md-10 col-lg-9 col-xl-9 formulario eliminar">
+	<!-- Mensaje de Advertencia -->
+	<h2 class="advertencia">¿ESTAS SEGURO DE ELIMINAR ESTA SUBÁREA?</h2>
+	<label>Nombre:</label>
+	<br>
+	<label>Area superior:</label>
+	<br>
+	<label>Subárea superior:</label>
+	<br>
+	<label>Icono:</label>
+	<!-- Boton para Eliminar la Subarea -->
+	<button class="btn btn-submit" name="eliminar">Eliminar Subárea</button>
+</form>
+
+</body>
+</html>

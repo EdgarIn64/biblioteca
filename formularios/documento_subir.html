@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Subir Documento</title>
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" type="text/css" href="../css/formulario.css">
+	<link rel="stylesheet" type="text/css" href="../css/navegacion.css">
+	<link rel="icon" type="image/png" href="../img/logo_icon.png">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body onload="navegacion()">
+<header class="navegacion">
+	<form style="display: inline;" class="d-xl-none" method="post" action="">
+		<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >Menú</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="dropdown-item" href="formularios/documento_subir.html">Subir Documento</a>
+				</li>
+				<div class="dropdown-divider"></div>
+				<div id="menuJs"></div>
+			</ul>
+		<input type="submit" class="right btn btn-light" name="salir" value="Salir">
+	</form>
+	<a href="../index.html">
+		<img src="../img/logo_white.png" id="logo" alt="Logo Signode">
+	</a>
+	<form class="right d-none d-xl-block" method="post" id="listaJs">
+		<a class="btn dropdown-toggle lista" href="formularios/documento_subir.html">Documento</a>
+	</form>
+</header>
+<!-- Titulo del formulario -->
+<header class="titulo">
+	<h1><a href="">Subir nuevo Documento</a></h1>
+	<hr>
+</header>
+
+<!-- Formulario del Documento -->
+<form enctype="multipart/form-data" method="post" action="" class="col-sm-11 col-md-10 col-lg-9 col-xl-9 formulario" id="form">
+	<label>Titulo:</label>
+	<input type="text" class="text" name="titulo" autofocus required maxlength="100">
+	<!-- Botón personalizado para subir Archivo -->
+	<label>Archivo:</label>
+	<label class="custom-file-upload">
+		Subir Archivo
+		<input type="file" name="documento" id="archivo" required>
+	</label>
+	<h5 id="nombreArchivo"></h5>
+	<h4 id="advertenciaOculta">El archivo debe pesar menos de 30mb</h4>
+	<!--Selección del area del Documento-->
+	<label>Área:</label>
+	<select name="area" id="areas">
+		<option>Área X</option>
+		<option>Área X</option>
+		<option>Área X</option>
+	</select>
+	<br>
+	<!-- Selección del Subarea del Documento -->
+	<label>Sub area:</label>
+	<select name="area" id="areas">
+		<option>Subárea X</option>
+		<option>Subárea X</option>
+		<option>Subárea X</option>
+	</select>
+	<br>
+	<label>Fecha de Revisión:</label>
+	<input type="date" name="fecha" required>
+	<label>Numero de Revisión:</label>
+	<input type="number" name="revision" min="0" max="100" required>
+	<!-- Boton para subir los datos del Documento -->
+	<button class="btn btn-submit" id="btnSubir" name="subir">Subir Documento</button>
+</form>
+<br>
+<!-- Script para mostrar y ocultar Subareas -->
+<script type="text/javascript" src="../js/listas.js"></script>
+<script type="text/javascript" src="../js/nombreArchivo.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+header.login {
+	background-color: white;
+	text-align: center;
+	margin-top: 10px;
+}
+
+div.bordeLogin {
+	background-color: rgb(175, 31, 1);
+	color: white;
+	text-align: center;
+	padding: 7px;
+	margin: 20px auto;
+	border-radius: 4px;
+}
+
+div.login {
+	text-align: left;
+	background-color: rgb(237, 237, 237);
+	padding: 25px;
+	margin: 10px 20px;
+	color: black;
+	border-radius: 4px;
+	font-size: 1.2rem;
+}
+
+.login .btn-submit {
+	background-color: rgb(175, 31, 1);
+	font-size: 1.25rem;
+	color: white;
+	width: 250px;
+}
+
+.login .btn-submit:hover {
+	background-color: rgb(195, 46, 16);
+	font-size: 1.25rem;
+	color: white;
+}
+
+td{
+	padding: 10px 20px 10px 0px;
+}
+
+article {
+	margin-top: 20px;
+	color: rgb(70, 70, 70);
+}
+
+.check, .msjCheck {
+	cursor: pointer;
+}
+
+input.text {
+	position: relative;
+	width: 70%;
+}
+
+input#usuario {
+	left: 41px;
+}
+
+input#password {
+	left: 10px;
+}
+
+input#checkPassword, .msjCheck {
+	position: relative;
+	left: 115px;
+}
+
+label.msjCheck {
+	margin-bottom: 20px;
+}
+
+label.espacio { 
+	margin-top: 15px;
+}

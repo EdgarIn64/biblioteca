@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signode Documentos Login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="icon" type="image/png" href="img/logo_icon.png">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<!-- Contenedor para ajustar el tamaño de la página -->
+<div class="container col-sm-12 col-md-12 col-lg-12 col-xl-12">
+	<!-- Encabezado donde se ubica 
+		el logo y nombre de la empresa -->
+	<header class="login">
+		<img src="img/logo.png" id="logoSignode" alt="Logo Signode">
+	</header>
+
+	<!-- Sección del formulario para iniciar sesión -->
+	<div class="col-sm-11 col-md-10 col-lg-9 col-xl-9 bordeLogin">
+		<h3>Inicio de Sesión</h3>
+		<div class="login">
+			<form method="post" action="">
+				<label>Usuario</label>
+				<input type="text" name="usuario" id="usuario" class="text" maxlength="50" autofocus required>
+				<br>
+				<label class="espacio">Contraseña</label>
+				<input type="password" name="password" id="password" class="text" maxlength="50" required>
+				<br>
+				<!-- JS para ver la contraseña -->
+				<input type="checkbox" class="check" id="checkPassword" onclick="viewPassword()">
+				<label class="msjCheck" onclick="msjPassword()">Ver contraseña</label>
+				<br>
+				<input type="submit" class="btn btn-submit" id="ingresar" name="ingresar" value="Ingresar">
+			</form>
+
+			<!-- Consejos para el usuario -->
+			<article>
+				Utilize la cuenta que le fue asigando por la administración.
+				<hr>
+				No olvide desconectarse o salir de su navegador cuando haya terminado.
+			</article>
+		</div><!-- Fin class=login -->
+		<!-- Pie de página -->
+		<footer>Plataforma de Administración de documentos</footer>
+	</div><!-- Fin class=bordeLogin -->
+</div><!-- Fin class=Container -->
+
+<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>
